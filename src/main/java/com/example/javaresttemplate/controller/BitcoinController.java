@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class BitcoinController {
 
     private final BitcoinService bitcoinService;
-
     public BitcoinController(BitcoinService bitcoinService) {
         this.bitcoinService = bitcoinService;
     }

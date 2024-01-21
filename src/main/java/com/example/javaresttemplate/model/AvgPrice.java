@@ -4,19 +4,13 @@ import java.math.BigDecimal;
 
 public class AvgPrice {
     private int mins;
-    private double price;
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
+    private BigDecimal price;
     private String symbol;
 
     public AvgPrice(int mins, BigDecimal price, String symbol) {
+        this.mins = mins;
+        this.price = price;
+        this.symbol = symbol;
     }
 
     public int getMins() {
@@ -27,6 +21,13 @@ public class AvgPrice {
         this.mins = mins;
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 
     public String getSymbol() {
         return symbol;
@@ -36,4 +37,12 @@ public class AvgPrice {
         this.symbol = symbol;
     }
 
+    @Override
+    public String toString() {
+        return "AvgPrice{" +
+                "mins=" + mins +
+                ", price=" + price +
+                ", symbol='" + symbol + '\'' +
+                '}';
+    }
 }
